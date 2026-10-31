@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eDiscovery Cost Data — EDiscoveryCosts.com</title>
+<meta name="description" content="Public figures on eDiscovery market size, per-gigabyte production and review costs, and litigation document volumes.">
+<link rel="canonical" href="https://ediscoverycosts.com/market-data">
+<meta property="og:title" content="eDiscovery Cost Data — EDiscoveryCosts.com">
+<meta property="og:description" content="Public figures on eDiscovery market size, per-gigabyte production and review costs, and litigation document volumes.">
+<meta property="og:url" content="https://ediscoverycosts.com/market-data">
+<meta property="og:type" content="website">
+<style>
+:root{--ink:#0d0c0a;--coal:#161412;--bronze:#c08d4e;--bronze-dim:#8a6536;--parchment:#efe9dc;--parchment-dim:#a89f8c;--line:rgba(192,141,78,.2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--parchment);font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px 52px;background:linear-gradient(to bottom,rgba(13,12,10,.94),transparent)}
+nav .brand{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.3em;color:var(--bronze);text-transform:uppercase;font-weight:500}
+nav .price-tag{font-size:13px;letter-spacing:.16em;color:var(--parchment-dim);text-transform:uppercase}
+nav .price-tag b{color:var(--bronze);font-weight:600}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 52px 100px;z-index:1}
+.hero-bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero-bg video{width:100%;height:100%;object-fit:cover;opacity:.5}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--ink) 6%,rgba(13,12,10,.66) 48%,rgba(13,12,10,.34) 100%)}
+.eyebrow{font-size:12px;letter-spacing:.44em;text-transform:uppercase;color:var(--bronze);margin-bottom:26px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(54px,8.6vw,128px);line-height:1;letter-spacing:-.005em;max-width:15ch;overflow-wrap:break-word;word-break:break-word}
+.hero h1 em{font-style:italic;color:var(--bronze)}
+.hero .lede{margin-top:28px;max-width:58ch;font-size:19px;color:var(--parchment-dim);font-weight:300}
+.hero-cta{margin-top:46px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:18px 46px;background:var(--bronze);color:var(--ink);text-decoration:none;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;transition:.35s;border:1px solid var(--bronze)}
+.btn:hover{background:transparent;color:var(--bronze)}
+.btn.ghost{background:transparent;color:var(--parchment);border-color:rgba(239,233,220,.32)}
+.btn.ghost:hover{border-color:var(--bronze);color:var(--bronze)}
+section{position:relative;z-index:1;padding:130px 52px;max-width:1300px;margin:0 auto}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.kicker{font-size:12px;letter-spacing:.44em;text-transform:uppercase;color:var(--bronze-dim);margin-bottom:22px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5.2vw,70px);line-height:1.12;margin-bottom:36px}
+h2 em{font-style:italic;color:var(--bronze)}
+.body-copy{font-size:18px;color:var(--parchment-dim);max-width:70ch;margin-bottom:22px}
+.body-copy strong{color:var(--parchment);font-weight:500}
+.pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(25px,3vw,38px);line-height:1.42;color:var(--parchment);border-left:2px solid var(--bronze);padding-left:34px;margin:56px 0;max-width:32ch}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:66px;align-items:center;margin-top:24px}
+.duo img{width:100%;height:540px;object-fit:cover;filter:saturate(.82) contrast(1.04)}
+.duo .cap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze-dim);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:74px}
+.stat{background:var(--ink);padding:56px 42px}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,4.6vw,66px);color:var(--bronze);font-weight:500}
+.stat .l{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--parchment-dim);margin-top:12px}
+.band{position:relative;z-index:1;margin:44px 0}
+.band img{width:100%;height:440px;object-fit:cover;opacity:.88}
+.buyers{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.buyer{border:1px solid var(--line);padding:46px 38px;transition:.35s;background:rgba(22,20,18,.55)}
+.buyer:hover{border-color:var(--bronze);transform:translateY(-6px)}
+.buyer h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;margin-bottom:16px;color:var(--parchment)}
+.buyer p{font-size:15px;color:var(--parchment-dim)}
+.buyer .read{display:inline-block;margin-top:20px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze);text-decoration:none;border-bottom:1px solid var(--bronze-dim);padding-bottom:5px;transition:.3s}
+.buyer .read:hover{border-color:var(--bronze);color:var(--parchment)}
+.cta-panel{position:relative;z-index:1;text-align:center;padding:150px 52px;overflow:hidden}
+.cta-panel .bg{position:absolute;inset:0;z-index:-1}
+.cta-panel .bg img{width:100%;height:100%;object-fit:cover;opacity:.28}
+.cta-panel .bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(13,12,10,.32),var(--ink) 92%)}
+.cta-panel h2{max-width:21ch;margin:0 auto 26px}
+.price-big{font-family:'Cormorant Garamond',serif;font-size:clamp(58px,7.2vw,100px);color:var(--bronze);font-weight:500;margin:12px 0 38px}
+footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:46px 52px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--parchment-dim);letter-spacing:.08em}
+footer a{color:var(--bronze);text-decoration:none}
+@media(max-width:900px){nav,.hero,section{padding-left:24px;padding-right:24px}.duo,.buyers,.stats{grid-template-columns:1fr}.duo img{height:340px}}
+</style>
+<style>
+/* --- Market-data page additions (staged page only) --- */
+main.wrap{max-width:920px;margin:0 auto;padding:118px 20px 64px}
+main.wrap h1,main.wrap h2,main.wrap h3{overflow-wrap:break-word;word-break:break-word}
+main.wrap h1{font-size:clamp(30px,6vw,52px);line-height:1.12;margin:12px 0 10px}
+main.wrap h2{font-size:clamp(22px,4vw,30px);line-height:1.25;margin:44px 0 12px}
+main.wrap h3{font-size:19px;margin:26px 0 8px}
+main.wrap p,main.wrap li{font-size:17px;line-height:1.7;margin:0 0 14px}
+main.wrap ul{padding-left:22px}
+.stamp{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;border:1px solid rgba(255,255,255,.25);padding:8px 14px}
+.lede{font-size:19px;line-height:1.7;opacity:.92}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:22px 0}
+.stat{border:1px solid rgba(255,255,255,.22);padding:18px 20px}
+.stat b{display:block;font-size:30px;line-height:1.2;margin-bottom:6px;overflow-wrap:break-word}
+.stat span{font-size:15px;line-height:1.55;display:block}
+.figtable{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:16px}
+.figtable th,.figtable td{text-align:left;padding:11px 10px;border-bottom:1px solid rgba(255,255,255,.18);vertical-align:top;overflow-wrap:break-word}
+.figtable th{font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.figtable td a,.stat a,main.wrap p a,main.wrap li a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.src{font-size:14px;opacity:.85}
+.buybox{border:1px solid rgba(255,255,255,.3);padding:22px 24px;margin:36px 0}
+.buybox a{color:inherit}
+.buybox .price{font-size:30px;font-weight:700;display:block;margin:6px 0}
+.note{background:rgba(255,255,255,.06);border-left:3px solid rgba(255,255,255,.4);padding:16px 20px;margin:26px 0}
+.note p{font-size:15px}
+footer{padding:32px 20px;text-align:center;font-size:14px}
+footer a{color:inherit}
+@media(max-width:520px){main.wrap{padding-top:96px}nav{padding:16px 18px!important}.figtable{font-size:14px}.figtable th,.figtable td{padding:9px 6px}}
+
+/* Phase 1 assembly 2026-10-31 */
+@media (max-width:900px){h1{font-size:clamp(44px,11vw,72px)!important}}
+@media (max-width:900px){.eyebrow,.kicker{letter-spacing:.18em!important}}
+@media (max-width:900px){nav{background:#0d0c0a!important;backdrop-filter:none!important}}
+
+/* Phase 1 assembly 2026-10-31 — nav solid correction */
+@media (max-width:900px){nav{background:rgb(13,12,10)!important;backdrop-filter:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ediscoverycosts.com market data",
+  "description": "Public figures on eDiscovery market size, per-gigabyte production and review costs, and litigation document volumes.",
+  "url": "https://ediscoverycosts.com/market-data",
+  "temporalCoverage": "2012/2025",
+  "creator": {
+    "@type": "Organization",
+    "name": "Prime Domain Capital"
+  },
+  "sourceOrganization": [
+    {
+      "@type": "Organization",
+      "url": "https://www.emergenresearch.com/industry-report/ediscovery-market"
+    },
+    {
+      "@type": "Organization",
+      "url": "https://complexdiscovery.com/complete-look-complexdiscovery-ous-2025-to-2030-ediscovery-market-size-mashup/"
+    },
+    {
+      "@type": "Organization",
+      "url": "https://www.logikcull.com/blog/ediscovery-opportunity-costs-infographic"
+    }
+  ],
+  "dateModified": "2026-10-25",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+<style>
+/* Mobile rendering fix 2026-10-31: domain H1 lines, stacked nav, header clearance */
+@media (max-width:900px){
+main h1{overflow-wrap:normal!important;word-break:normal!important}
+nav:not(.toc){flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+.topbar{flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+main{padding-top:120px!important}
+main h1{font-size:clamp(30px,8.5vw,58px)!important;line-height:1.15!important}
+}
+</style>
+</head>
+<body>
+<nav><div class="brand">Prime Domain Capital</div><a class="cta" href="https://www.afternic.com/domain/ediscoverycosts.com">Buy Now — $22,888</a></nav>
+<main class="wrap">
+<span class="stamp">Last updated: October 25, 2026</span>
+<p class="src" style="margin-top:14px">Market data · eDiscovery market size, review costs, and document volumes</p>
+<h1>The second invoice in every lawsuit</h1>
+
+<p class="lede">Discovery is where litigation budgets go to be surprised. The evidence lives in inboxes, chat logs, and phones, and the bill for finding it can rival the cost of arguing the case. Public market studies disagree on the total size of the eDiscovery market by billions — and that disagreement itself is informative, because it turns on what counts as eDiscovery in the first place.</p>
+<h2>Headline figures</h2>
+<div class="statgrid">
+<div class="stat"><b>$14.82B</b><span>Global eDiscovery market size in 2025, forecast to $35.73 billion by 2035 at a 9.2% CAGR. <a class="src" href="https://www.emergenresearch.com/industry-report/ediscovery-market">Source: Emergen Research, public summary</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: ▲ Projected growth: forecast to $35.73 billion by 2035 (9.2% CAGR, from the 2025 base)</span></div>
+<div class="stat"><b>$19.61B</b><span>Reconciled 2025 worldwide spend on collection, processing, and review, rising to a projected $28.08 billion by 2030. <a class="src" href="https://complexdiscovery.com/complete-look-complexdiscovery-ous-2025-to-2030-ediscovery-market-size-mashup/">Source: ComplexDiscovery market-size mashup</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: ▲ Projected growth: forecast to $28.08 billion by 2030 (from the 2025 base)</span></div>
+<div class="stat"><b>62%</b><span>Share of 2025 task spend going to review ($12.16B), against 21% for processing ($4.12B) and 17% for collection ($3.33B). <a class="src" href="https://complexdiscovery.com/market-intelligence-the-ediscovery-task-composition-shift-from-2025-to-2030/">Source: ComplexDiscovery task-composition analysis</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: Baseline (October 2026) — trend tracking starts with the next refresh</span></div>
+<div class="stat"><b>$18,000/GB</b><span>RAND's 2012 estimate for producing a gigabyte of evidence — the anchor figure every later cost decline is measured against. <a class="src" href="https://www.logikcull.com/blog/ediscovery-opportunity-costs-infographic">Source: RAND study, via Logikcull</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: Baseline (October 2026) — trend tracking starts with the next refresh</span></div>
+</div>
+<p>Trend column: each figure is compared with its prior period from the same source, with the prior figure shown. Where no prior-period figure from the same source was available, the figure is labeled Baseline (October 2026) — trend tracking starts with the next refresh.</p><table class="figtable"><tr><th>Figure</th><th>Value</th><th>Source</th><th>Trend vs prior period</th></tr>
+<tr><td>Global market, 2025 (alternate estimate)</td><td>$15.43B, 8.5% CAGR 2025–2035</td><td><a href="https://www.reportsanddata.com/report-detail/ediscovery-market">Reports and Data, public summary</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>Typical U.S. civil case data volume</td><td>~130 GB, ~6.5M pages, 10–15 custodians</td><td><a href="https://www.logikcull.com/blog/ediscovery-opportunity-costs-infographic">Logikcull, citing RAND-era case data</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>Share of production cost going to document review (RAND-era)</td><td>Up to 70%</td><td><a href="https://www.logikcull.com/blog/ediscovery-opportunity-costs-infographic">RAND study, via Logikcull</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>Technology-assisted review pricing, 2025 survey</td><td>27% of respondents below $75/GB</td><td><a href="https://www.jdsupra.com/post/contentViewerEmbed.aspx?fid=e655d7af-79a2-4ff8-b08a-1d8a22c5b188">Summer 2025 eDiscovery Pricing Survey, via JD Supra</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>Remote managed review rates, 2025 survey</td><td>Majority $25–$40/hour; 31% above $40/hour</td><td><a href="https://www.jdsupra.com/post/contentViewerEmbed.aspx?fid=e655d7af-79a2-4ff8-b08a-1d8a22c5b188">Summer 2025 eDiscovery Pricing Survey, via JD Supra</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>Volume-platform pricing range, 2026 roundup</td><td>~$3–$30+/GB; processing ~$50–$250/GB</td><td><a href="https://blog.9cv9.com/top-114-ediscovery-software-statistics-data-trends-in-2026/">9cv9 pricing roundup</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+</table>
+<p>The arc from $18,000 per gigabyte in 2012 to single-digit or tens-of-dollars per gigabyte today is the real story: review technology compressed unit costs while data volumes grew far faster than budgets. ComplexDiscovery's reconciled view makes the tension explicit — data growth outrunning market growth by a wide margin through 2030, which means every dollar of review spend has to cover more documents each year. The firms that win that arithmetic are the ones treating collection discipline and early case assessment as cost controls, not administrative chores.</p>
+<div class="note"><h3>Methodology</h3><p>Included: public market-size summaries from three research publishers, a reconciled task-spend analysis, the RAND 2012 per-gigabyte benchmark, and a 2025 industry pricing survey. Excluded: paywalled report tables, vendor rate cards, and any court-published per-case cost dataset — none was verified this session. Market totals differ because firms define the market differently (software only vs software plus services); the page shows the range rather than picking one.</p><p><strong>Disclaimer:</strong> Aggregated public estimates for information only, not investment or professional advice. Per-gigabyte and hourly figures vary by matter size, data type, and jurisdiction.</p></div>
+
+<div class="buybox">
+<span>This domain is for sale</span>
+<span class="price">Buy Now — $22,888</span>
+<p>Secure transfer via <a href="https://www.afternic.com/domain/ediscoverycosts.com">Afternic</a> &middot; Inquiries: <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></p>
+</div>
+<h2>Changelog</h2>
+<ul>
+<li>October 2026: Initial edition — market size, case volumes, review share and costs, and pricing-survey ranges established; trend indicators added to every figure (prior-period figures shown where the same source publishes them; all other figures labeled Baseline (October 2026)).</li>
+</ul>
+</main>
+<footer><p>Offered by <strong>Prime Domain Capital</strong> &middot; Private holder of category-defining domains</p><p><a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></p></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1407571ec8bc45c3a082c91096558135"}'></script>
+<p class="back-home" style="display:block;text-align:center;padding:28px 16px;font-size:15px"><a href="https://ediscoverycosts.com/" style="color:inherit">&larr; Back to ediscoverycosts.com</a></p>
+</body>
+</html>
